@@ -1309,6 +1309,10 @@ article:last-child {
   width: auto;
 }
 
+.portfolio_image {
+  width: auto;
+}
+
 /* Button */
 input[type=button],
 input[type=submit],
