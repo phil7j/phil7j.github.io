@@ -436,7 +436,7 @@
 		}
 
 		&.featured {
-			display: block;
+			// display: block;
 			width: 100%;
 			margin: 0 0 2em 0;
 		}
@@ -456,9 +456,18 @@
 			}
 		}
 	}
+
 	.portfolio_image {
-		// max-height: 195px;
-		width: auto;
+		// position: relative;
+		// width: 100px;
+		height: 220px;
+		overflow: hidden;
+		// background-position: 50% 50%;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		margin: 1px;
+		border-bottom: 1px solid rgb(226, 226, 226);
+		object-fit: scale-down;
 	}
 /* Button */
 
@@ -692,6 +701,9 @@
 		}
 
 		&.style2 {
+			display: flex;
+			flex-direction: column;
+			// justify-content: ceter;
 			h3 {
 				margin-bottom: 0.25em;
 			}
@@ -704,6 +716,13 @@
 				width: auto;
 			}
 		}
+		.card-footer {
+			// border: 2px solid red;
+			justify-content: center;
+			display: flex;
+			height: 100%;
+		}
+
 	}
 
 /* Icons */
@@ -714,7 +733,7 @@
 		&:before {
 			display: inline-block;
 			font-family: FontAwesome;
-			font-size: 1.25em;
+			font-size: 2.25em;
 			text-decoration: none;
 			font-style: normal;
 			font-weight: normal;
@@ -736,6 +755,25 @@
 			&:before {
 				font-size: 6em;
 			}
+		}
+	}
+	// Icons for portfolio
+	.p-icon {
+		align-self: flex-end;
+		&:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 2.0em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			color: black;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		> .label {
+			display: none;
 		}
 	}
 
