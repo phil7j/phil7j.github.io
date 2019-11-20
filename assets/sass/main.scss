@@ -128,12 +128,12 @@
 	}
 
 	a {
-		@include vendor('transition', 'color .2s ease-in-out');
+		@include vendor('transition', 'color .1s ease-in');
 		color: #43B3E0;
 		text-decoration: underline;
 
 		&:hover {
-			color: #43bff0 !important;
+			color: #0f8838;
 		}
 
 		img {
@@ -220,7 +220,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 	header {
@@ -760,18 +760,24 @@
 	// Icons for portfolio
 	.p-icon {
 		align-self: flex-end;
+		color: black;
 		&:before {
 			display: inline-block;
 			font-family: FontAwesome;
-			font-size: 2.0em;
+			font-size: 2.8em;
 			text-decoration: none;
 			font-style: normal;
 			font-weight: normal;
 			line-height: 1;
-			color: black;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
+			transition: color 250ms ease-in-out;
 		}
+			&:hover {
+				// font-size: 1.2em;
+				color: #d3551a;
+			}
+
 		> .label {
 			display: none;
 		}
