@@ -128,12 +128,12 @@
 	}
 
 	a {
-		@include vendor('transition', 'color .2s ease-in-out');
+		@include vendor('transition', 'color .1s ease-in');
 		color: #43B3E0;
 		text-decoration: underline;
 
 		&:hover {
-			color: #43bff0 !important;
+			color: #0f8838;
 		}
 
 		img {
@@ -220,7 +220,7 @@
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 	header {
@@ -436,7 +436,7 @@
 		}
 
 		&.featured {
-			display: block;
+			// display: block;
 			width: 100%;
 			margin: 0 0 2em 0;
 		}
@@ -456,9 +456,18 @@
 			}
 		}
 	}
+
 	.portfolio_image {
-		// max-height: 195px;
-		width: auto;
+		// position: relative;
+		height: 150px;
+		max-width: 250px;
+		overflow: hidden;
+		// background-position: 50% 50%;
+		// background-repeat: no-repeat;
+		// background-size: cover;
+		margin: 20px auto;
+		// border-bottom: 1px solid rgb(226, 226, 226);
+		object-fit: scale-down;
 	}
 /* Button */
 
@@ -692,6 +701,9 @@
 		}
 
 		&.style2 {
+			display: flex;
+			flex-direction: column;
+			// justify-content: ceter;
 			h3 {
 				margin-bottom: 0.25em;
 			}
@@ -704,6 +716,13 @@
 				width: auto;
 			}
 		}
+		.card-footer {
+			// border: 2px solid red;
+			justify-content: center;
+			display: flex;
+			height: 100%;
+		}
+
 	}
 
 /* Icons */
@@ -714,7 +733,7 @@
 		&:before {
 			display: inline-block;
 			font-family: FontAwesome;
-			font-size: 1.25em;
+			font-size: 2.25em;
 			text-decoration: none;
 			font-style: normal;
 			font-weight: normal;
@@ -736,6 +755,31 @@
 			&:before {
 				font-size: 6em;
 			}
+		}
+	}
+	// Icons for portfolio
+	.p-icon {
+		align-self: flex-end;
+		color: black;
+		&:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: 2.8em;
+			text-decoration: none;
+			font-style: normal;
+			font-weight: normal;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			transition: color 250ms ease-in-out;
+		}
+			&:hover {
+				// font-size: 1.2em;
+				color: #d3551a;
+			}
+
+		> .label {
+			display: none;
 		}
 	}
 
@@ -774,6 +818,7 @@
 			form {
 				input[type=text],
 				input[type=password],
+				input[type=email],
 				select,
 				textarea {
 					border: none;
